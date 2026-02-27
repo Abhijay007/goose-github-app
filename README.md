@@ -49,7 +49,9 @@ Think CodeRabbit, but open source, privacy-first, and built on top of Goose with
 
 Something like this that we have in OpenAI Codex and Tembo : 
 
-<img width="1228" height="652" alt="image" src="https://github.com/user-attachments/assets/64390cad-8d22-4352-bfa8-a901736904ef" />
+
+<img width="1910" height="998" alt="Non Text Magic Studio Magic Design for Presentations L P" src="https://github.com/user-attachments/assets/c3f4a0b0-8c52-4d2d-b52f-c94e49a1cf0b" />
+
 
 
 ### Pluggable Execution Modes  
