@@ -318,7 +318,7 @@ Some of the planned features include:
 
 To make this work, users will need to configure GitHub webhooks. Once set up, Copilot will listen to events like pull requests and issues, and then take actions accordingly, I belive we can leverage recipes here and even have app integrations like slack, liner etc, my long term idea around this is something like we have in tembo : 
 
-<img width="779" height="629" alt="image" src="https://github.com/user-attachments/assets/11a934df-13c3-4de2-8f94-3d6e552c0f31" />
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/11a934df-13c3-4de2-8f94-3d6e552c0f31" />
 
 
 At the moment, these features are not fully implemented and are marked as coming soon. However, the structure and flow for this section are already in place.
