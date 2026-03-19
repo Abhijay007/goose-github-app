@@ -235,7 +235,9 @@ Transform Goose into an interactive, extensible AI teammate that lives in GitHub
 
 After the initial discussions with the team, I spent some time thinking through how we can realistically approach and build this feature. The goal was not just to implement something quickly, but to create a structure that can scale as we add more capabilities in the future.
 
-Based on those discussions, I created an initial plan and started working on it. While implementing, I realized that a few UI/UX aspects are still not fully refined. Those gaps are visible in the current working branch, and I plan to iterate on them in the next phase.
+you can track the progress from here : https://github.com/Abhijay007/goose/tree/feat/gooseCopilotDashboard
+
+Based on those discussions, I created an initial plan and started working on it. While implementing, I realized that a few aspects are still not fully refined. Those gaps are visible in the current working branch, and I plan to iterate on them in the next phase.
 
 ---
 
