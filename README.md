@@ -226,3 +226,126 @@ By combining **GooseHub (GitHub App)**,  **App Integrations** and **Goose Assist
 
 **End Goal:**  
 Transform Goose into an interactive, extensible AI teammate that lives in GitHub and responds naturally — via code or voice.
+
+---
+
+# Progress – Phase One
+
+## Overview
+
+After the initial discussions with the team, I spent some time thinking through how we can realistically approach and build this feature. The goal was not just to implement something quickly, but to create a structure that can scale as we add more capabilities in the future.
+
+Based on those discussions, I created an initial plan and started working on it. While implementing, I realized that a few UI/UX aspects are still not fully refined. Those gaps are visible in the current working branch, and I plan to iterate on them in the next phase.
+
+---
+
+## Core Structure – Introducing Copilot
+
+One of the first decisions I made was to introduce a new section called **Copilot**.
+
+Instead of scattering functionality across different parts of the app, this acts as a single, central place where all Copilot-related workflows live. The idea is to make the experience intuitive and focused, especially as we add more features.
+
+Inside Copilot, I structured things into multiple sections:
+
+- Dashboard  
+- Integrations  
+- Automation  
+- Insights  
+- Settings  
+
+Each of these sections serves a specific purpose, and together they form the complete experience.
+
+---
+
+## GitHub Authentication and Setup
+
+Starting from the basics, the first step was enabling GitHub authentication.
+
+
+<img width="1512" height="982" alt="Screenshot 2026-03-19 at 10 56 45 PM" src="https://github.com/user-attachments/assets/6c0afccd-a9fa-4783-b5e6-e1cef9461c77" />
+
+
+Users can now sign in with their GitHub account and connect their repositories. This is important because almost everything we want Copilot to do depends on access to a repository—whether it is creating pull requests, reviewing code, or managing issues.
+
+The idea here is to keep the setup simple. Once the user connects GitHub, they can select the repository where they want to use Copilot, and everything else builds on top of that.
+
+---
+
+## Dashboard
+
+After login, the user lands on the **Dashboard**, which acts as the main working area.
+
+<img width="1512" height="982" alt="Screenshot 2026-03-19 at 10 47 03 PM" src="https://github.com/user-attachments/assets/994c166a-f2ff-4c3f-901b-bedea3e7d1fa" />
+
+
+The Dashboard is designed to combine both visibility and action. At the top, there is a chat interface where users can directly interact with Copilot. This allows users to give instructions in a natural way, such as asking to create a PR or review something.
+
+Along with the chat, there are quick action suggestions to guide users on what they can do. This helps especially in the early stages when users are still exploring the system.
+
+Below that, there is a list of tasks that shows what has been created or is currently in progress. Each task includes its status, such as in progress or open, so users can quickly understand what is happening.
+
+Overall, the Dashboard is meant to feel like a control center where users can both initiate actions and track ongoing work.
+
+---
+
+## Integrations
+
+The **Integrations** section is where users connect external tools.
+
+<img width="1512" height="982" alt="Screenshot 2026-03-19 at 10 47 12 PM" src="https://github.com/user-attachments/assets/25691070-730f-44f1-832b-71abb844f22c" />
+
+
+Right now, GitHub integration is working and forms the base of the system. Once connected, the system is able to interact with repositories on behalf of the user.
+
+I have kept this section simple for now, but the structure is designed to support additional integrations in the future. The idea is that Copilot should not be limited to just GitHub, and we should be able to plug in more tools over time, like GitLab, Azure Repos, Bitbucket etc, so that user can use the copilot with different tools out there.
+
+---
+
+## Automation
+
+The **Automation** section is focused on enabling event-driven workflows.
+
+<img width="1512" height="982" alt="Screenshot 2026-03-19 at 10 49 07 PM" src="https://github.com/user-attachments/assets/88b855c8-eb25-4201-808d-4db7b0ec2f6e" />
+
+
+The long-term idea here is that users should not always have to manually trigger actions. Instead, Copilot should be able to respond automatically to events happening in the repository.
+
+Some of the planned features include:
+
+- Automatically reviewing pull requests when they are opened or updated  
+- Automatically merging pull requests once all checks pass  
+- Handling issue triage by labeling and summarizing new issues  
+
+To make this work, users will need to configure GitHub webhooks. Once set up, Copilot will listen to events like pull requests and issues, and then take actions accordingly, I belive we can leverage recipes here and even have app integrations like slack, liner etc, my long term idea around this is something like we have in tembo : 
+
+<img width="779" height="629" alt="image" src="https://github.com/user-attachments/assets/11a934df-13c3-4de2-8f94-3d6e552c0f31" />
+
+
+At the moment, these features are not fully implemented and are marked as coming soon. However, the structure and flow for this section are already in place.
+
+---
+
+## Insights
+
+The **Insights** section provides visibility into how Copilot is being used.
+
+<img width="1512" height="982" alt="Screenshot 2026-03-19 at 10 50 18 PM" src="https://github.com/user-attachments/assets/f1d2174f-d621-40af-94b4-bcbc6d6e6dda" />
+
+It shows high-level metrics such as the total number of tasks created, how many are currently active, and how many have been completed. It also includes a breakdown of activity across repositories and the current status distribution of tasks.
+
+The goal of this section is to give users a clear understanding of their activity and progress over time. It also helps in identifying patterns, such as whether most tasks are getting completed or staying in progress.
+
+---
+
+## Summary
+
+In this first phase, the focus was on building a strong foundation rather than polishing every detail.
+
+The main things achieved include:
+
+- Defining a clear structure around the Copilot experience  
+- Setting up GitHub authentication and repository access  
+- Building the core sections: Dashboard, Integrations, Automation, and Insights  
+- Creating a workflow where users can interact through chat and manage tasks  
+
+There are still improvements needed, especially in terms of UI/UX and some incomplete features and even need lot for work around copilot app. However, the base system is now in place, and it gives us a solid starting point to iterate and improve in the next phase.
